@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import TodoList from './components/TodoList';
+import AddForm from './components/AddForm';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header content-left">
+        <div style={{textAlign : 'center'}}>
+          <img src={logo} className="App-logo" alt="logo" />
+        </div>
         
         <TodoList />
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+
+      <div className='content-right'>
+        <AddForm />
+      </div>
     </div>
   );
 }
